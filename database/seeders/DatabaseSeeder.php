@@ -20,5 +20,15 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        /*
+        Funziona che mi permette di eliminare, creare e lanciare più seeder 
+        contemporaneamente comando php artisan migrate:refresh --seed
+        */
+
+        $this->call([
+            UserSeeder::class,
+            ProjectSeeder::class
+        ]);
     }
 }
