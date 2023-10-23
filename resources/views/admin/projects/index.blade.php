@@ -9,6 +9,8 @@
 @section('content')
     <div class="container mt-5">
 
+        <a href="{{ route('admin.projects.create') }}" role="button" class="btn btn-primary">Crea Progetto</a>
+
         <h1 class="my-5">Lista dei Progetti</h1>
 
         <table class="table">
@@ -36,6 +38,9 @@
                         <td>
                             <a href="{{ route('admin.projects.show', $project) }}"><i
                                     class="fa-solid text-primary fa-eye"></i></a>
+
+                            <a href="{{ route('admin.projects.edit', $project) }}"><i
+                                    class="fa-solid text-warning fa-pen-to-square px-2"></i></a>
 
                         </td>
                     </tr>
