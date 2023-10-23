@@ -2,7 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+//ADMIN
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\PageController as AdminPageController;
+
+//GUEST
 use App\Http\Controllers\Guest\PageController as GuestPageController;
 
 /*
@@ -26,6 +30,7 @@ Route::middleware(['auth', 'verified'])
 
     Route::get('/', [AdminPageController::class, 'index'])->name('home');
 
+    Route::resource('projects', ProjectController::class);
   });
 
 require __DIR__ . '/auth.php';
