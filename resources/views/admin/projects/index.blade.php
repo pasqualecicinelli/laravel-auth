@@ -28,7 +28,7 @@
             @forelse ($projects as $project)
                 <tr>
                     <th scope="row">{{ $project->id }}</th>
-                    <td>{{ $project->name }}</td>
+                    <td>{{ $project->name_prog }}</td>
                     <td>{{ $project->repo }}</td>
                     <td>{{ $project->slug }}</td>
                     <td>{{ $project->created_at }}</td>
@@ -79,7 +79,7 @@
                     <div class="modal-body">
                         <span>Progetto numero: </span> {{ $project->id }} <br>
                         <span>Nome del progetto: </span>
-                        {{ $project->name }}
+                        {{ $project->name_prog }}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>

@@ -14,7 +14,7 @@ return new class extends Migration {
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 30);
+            $table->string('name_prog', 30);
             $table->string('repo', 50);
             $table->string('link');
             $table->text('description')->nullable();

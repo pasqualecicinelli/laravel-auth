@@ -9,7 +9,7 @@
     <div class="row g-5 mt-3">
         <div class="col-3">
             <h5>Nome del progetto</h5>
-            <span>{{ $project->name }}</span>
+            <span>{{ $project->name_prog }}</span>
         </div>
 
         <div class="col-3">

@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreProjectRequest;
+use App\Models\Project;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-use App\Models\Project;
 
 class ProjectController extends Controller
 {
@@ -38,14 +40,14 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreProjectRequest $request)
     {
-        $data = $request->all();
+        $data = $request->validated();
         $project = new Project();
         $project->fill($data);
 
-        //Genero lo slug dal name del progetto
-        $project->slug = Str::slug($project->name);
+        //Genero lo slug dal name_prog del progetto
+        $project->slug = Str::slug($project->name_prog);
         $project->save();
         return redirect()->route("admin.projects.show", $project);
     }
@@ -84,7 +86,7 @@ class ProjectController extends Controller
         //Dividiamo le operazioni altrimenti slug non si aggiorna
         $data = $request->all();
         $project->fill($data);
-        $project->slug = Str::slug($project->name);
+        $project->slug = Str::slug($project->name_prog);
         $project->save();
         return redirect()->route('admin.projects.show', $project);
     }
