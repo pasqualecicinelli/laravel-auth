@@ -47,6 +47,8 @@
             </div>
 
             <button type="submit" class="btn btn-success">Salva</button>
+            <a href={{ route('admin.projects.index') }} class="btn btn-primary my-3">Indietro</a>
+
 
         </form>
 
