@@ -42,7 +42,7 @@ class ProjectController extends Controller
         $project = new Project();
         $project->fill($data);
         $project->save();
-        return redirect()->route("admin.projects.show", $project->id);
+        return redirect()->route("admin.projects.show", $project);
     }
 
     /**
