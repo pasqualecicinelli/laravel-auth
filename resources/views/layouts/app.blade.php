@@ -26,10 +26,15 @@
     <div id="app">
         @include('partials._navbar')
 
-        <main class="">
-            @yield('content')
+        <main>
+            <div class="container mt-5">
+                @yield('content')
+
+
+            </div>
         </main>
     </div>
+    @yield('modals')
 </body>
 
 </html>

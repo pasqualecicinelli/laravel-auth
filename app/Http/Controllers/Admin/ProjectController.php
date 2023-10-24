@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 use App\Models\Project;
 
@@ -16,7 +17,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::paginate(5);
+        //Paginate di 5 elem per pagina più ordinamento decrescente
+        $projects = Project::orderByDesc("id")->paginate(5);
         return view("admin.projects.index", compact("projects"));
     }
 
@@ -41,6 +43,9 @@ class ProjectController extends Controller
         $data = $request->all();
         $project = new Project();
         $project->fill($data);
+
+        //Genero lo slug dal name del progetto
+        $project->slug = Str::slug($project->name);
         $project->save();
         return redirect()->route("admin.projects.show", $project);
     }
@@ -76,8 +81,11 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
+        //Dividiamo le operazioni altrimenti slug non si aggiorna
         $data = $request->all();
-        $project->update($data);
+        $project->fill($data);
+        $project->slug = Str::slug($project->name);
+        $project->save();
         return redirect()->route('admin.projects.show', $project);
     }
 

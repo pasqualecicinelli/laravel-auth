@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Str;
 use App\Models\Project;
 
 class ProjectSeeder extends Seeder
@@ -22,6 +22,7 @@ class ProjectSeeder extends Seeder
 
             $project = new Project();
             $project->fill($_project);
+            $project->slug = Str::slug($project->name);
             $project->save();
         }
     }
