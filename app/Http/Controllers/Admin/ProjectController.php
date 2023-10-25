@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProjectRequest;
+use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
 
 use Illuminate\Http\Request;
@@ -81,10 +82,10 @@ class ProjectController extends Controller
      * @param  int  $id
      * return \Illuminate\Http\Response
      */
-    public function update(Request $request, Project $project)
+    public function update(UpdateProjectRequest $request, Project $project)
     {
         //Dividiamo le operazioni altrimenti slug non si aggiorna
-        $data = $request->all();
+        $data = $request->validated();
         $project->fill($data);
         $project->slug = Str::slug($project->name_prog);
         $project->save();
