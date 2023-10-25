@@ -22,7 +22,7 @@ class ProjectSeeder extends Seeder
 
             $project = new Project();
             $project->fill($_project);
-            $project->slug = Str::slug($project->name);
+            $project->slug = Str::slug($project->name_prog);
             $project->save();
         }
     }

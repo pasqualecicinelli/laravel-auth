@@ -7,7 +7,7 @@ return [
         'repo' => 'laravel-dc-comics',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'progetto dc comics migration, seeder,resurce e controll',
-        'slug' => 'dc-comic'
+
     ],
 
     [
@@ -15,7 +15,7 @@ return [
         'repo' => 'laravel-migration-seeder',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'primo progetto con migration e seeder',
-        'slug' => 'migration-seed'
+
     ],
 
     [
@@ -23,7 +23,7 @@ return [
         'repo' => 'laravel-primi-passi',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'primo progetto Laravel',
-        'slug' => 'primi-passi'
+
     ],
 
     [
@@ -31,7 +31,7 @@ return [
         'repo' => 'db-university',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'primo progetto database',
-        'slug' => 'university'
+
     ],
 
     [
@@ -39,14 +39,14 @@ return [
         'repo' => 'php-hotel',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'progetto con una lista degli hotel',
-        'slug' => 'hotel'
+
     ],
     [
         'name_prog' => 'dc comics',
         'repo' => 'laravel-dc-comics',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'progetto dc comics migration, seeder,resurce e controll',
-        'slug' => 'dc-comic'
+
     ],
 
     [
@@ -62,7 +62,7 @@ return [
         'repo' => 'laravel-primi-passi',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'primo progetto Laravel',
-        'slug' => 'primi-passi'
+
     ],
 
     [
@@ -70,7 +70,7 @@ return [
         'repo' => 'db-university',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'primo progetto database',
-        'slug' => 'university'
+
     ],
 
     [
@@ -78,7 +78,7 @@ return [
         'repo' => 'php-hotel',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'progetto con una lista degli hotel',
-        'slug' => 'hotel'
+
     ],
 
     [
@@ -86,7 +86,7 @@ return [
         'repo' => 'laravel-dc-comics',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'progetto dc comics migration, seeder,resurce e controll',
-        'slug' => 'dc-comic'
+
     ],
 
     [
@@ -94,7 +94,7 @@ return [
         'repo' => 'laravel-migration-seeder',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'primo progetto con migration e seeder',
-        'slug' => 'migration-seed'
+
     ],
 
     [
@@ -102,7 +102,7 @@ return [
         'repo' => 'laravel-primi-passi',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'primo progetto Laravel',
-        'slug' => 'primi-passi'
+
     ],
 
     [
@@ -110,7 +110,7 @@ return [
         'repo' => 'db-university',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'primo progetto database',
-        'slug' => 'university'
+
     ],
 
     [
@@ -118,7 +118,7 @@ return [
         'repo' => 'php-hotel',
         'link' => 'https://github.com/pasqualecicinelli/laravel-dc-comics',
         'description' => 'progetto con una lista degli hotel',
-        'slug' => 'hotel'
+
     ],
 
 
