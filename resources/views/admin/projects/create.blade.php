@@ -51,7 +51,7 @@
             <span class="input-group-text">Descrizione</span>
             <label for="description" class="form-label"></label>
             <textarea id="description" name="description" class="form-control @error('description') is-invalid @enderror"
-                aria-label="With textarea" value={{ old('description') }}></textarea>
+                aria-label="With textarea">{{ old('description') }}</textarea>
         </div>
 
         <button type="submit" class="btn btn-success">Salva</button>

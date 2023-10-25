@@ -30,6 +30,7 @@ Route::middleware(['auth', 'verified'])
 
     Route::get('/', [AdminPageController::class, 'index'])->name('home');
 
+    //Nel url stampo lo slug al posto dell'Id
     Route::resource('projects', ProjectController::class)->parameters(['projects' => 'project:slug']);
   });
 

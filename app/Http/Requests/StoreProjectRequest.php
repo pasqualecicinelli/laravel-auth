@@ -28,16 +28,26 @@ class StoreProjectRequest extends FormRequest
             'repo' => ['required', 'string', 'max:50'],
             'link' => ['required', 'url',],
             'description' => ['string'],
-            'slug' => ['string', 'max:30']
+
         ];
     }
-    //Continuare con le validation
+
     public function messages()
     {
         return [
             'name_prog.required' => 'Il nome è obbligatorio',
-            'name_prog.string' => 'Il nome deve essere una string',
-            'name_prog.max' => 'Il nome deve essere massimo di 30 caratteri'
+            'name_prog.string' => 'Il nome deve essere una stringa',
+            'name_prog.max' => 'Il nome deve essere massimo di 30 caratteri',
+
+            'repo.required' => 'La repo è obbligatorio',
+            'repo.string' => 'La repo deve essere una stringa',
+            'repo.max' => 'La repo deve essere massimo di 50 caratteri',
+
+            'link.required' => 'Il link è obbligatorio',
+            'link.url' => 'Il link deve essere un URL',
+
+            'description.string' => 'La descrizione deve essere una stringa',
+
         ];
     }
 
